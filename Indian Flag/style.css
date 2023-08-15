@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200&display=swap');
+
+h2{
+    text-align: center;
+}
+
+body{
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+
+.flag-container {
+    display: flex;
+    justify-content: center;
+}
+
+.stick {
+    height: 450px;
+    width: 10px;
+    background: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.flag {
+    width: 270px;
+    height: 180px;
+    box-shadow: 0px 0px 90px 1px #989;
+    background-color: transparent;
+    position: relative;
+}
+
+.top,
+.middle,
+.bottom {
+    height: 60px;
+    width: auto;
+    animation: wave 5s infinite;
+}
+
+.top {
+    /* background-color: orange; */
+    background: linear-gradient(to bottom, #ff9020 0%, #FFCC29 100%);
+}
+
+.middle {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    /* background-color: green; */
+    background: linear-gradient(to bottom, #138808 0%, #0b710b 100%);
+
+}
+
+.wheel {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    outline: 1px solid darkblue;
+    position: relative;
+    animation-name: wheel;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+.line {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: darkblue;
+    left: 50%;
+}
+
+.line:nth-child(1) {
+    transform: rotate(15deg);
+}
+
+.line:nth-child(2) {
+    transform: rotate(30deg);
+}
+
+.line:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+.line:nth-child(4) {
+    transform: rotate(60deg);
+}
+
+.line:nth-child(5) {
+    transform: rotate(75deg);
+}
+
+.line:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.line:nth-child(7) {
+    transform: rotate(105deg);
+}
+
+.line:nth-child(8) {
+    transform: rotate(120deg);
+}
+
+.line:nth-child(9) {
+    transform: rotate(135deg);
+}
+
+.line:nth-child(10) {
+    transform: rotate(150deg);
+}
+
+.line:nth-child(11) {
+    transform: rotate(165deg);
+}
+
+.line:nth-child(12) {
+    transform: rotate(180deg);
+}
+
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wave {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(128deg, rgba(89, 72, 21, 0) 39%,
+            rgba(250, 245, 245, 0.8474025974025974) 46%, rgba(89, 72, 21, 0) 53%);
+    animation-name: wavy;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes wavy {
+    0% {
+        background-position:
+            -400px 0px, -400px 0px,
+            -400px 0px, -400px 0px;
+    }
+
+    100% {
+        background-position: 800px 0px,
+            800px 0px, 800px 0px, 800px 0px;
+    }
+}
+
+.brick{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #463f27;
+    border-radius: 4px;
+    display: column;
+    margin-top: 90%;
+    margin-left: -20%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
